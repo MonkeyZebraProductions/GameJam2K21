@@ -31,5 +31,6 @@ public class PortalOpener : MonoBehaviour
         //for loop size of portal background back down.
         //turn off collider object that'll count/yeet the object.
         portalCentre.SetActive(false);
+        opened = false;
     }
 }
