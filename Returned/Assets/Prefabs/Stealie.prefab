@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 7816261190253985685}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6897671356747383006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3200614552414708419}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3200614552414708419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897671356747383006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7816261190253985685}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7816261189336155472
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 7816261189336155472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 7816261190253985685}
   m_RootOrder: 0
@@ -101,7 +131,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 3897760489967693582, guid: 759a793d41c18b343912d44e4341e66e, type: 3}
   m_Color: {r: 0.22828455, g: 0, b: 0.2830189, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,6 +174,7 @@ Transform:
   m_Children:
   - {fileID: 7816261189336155473}
   - {fileID: 5924048257866093987}
+  - {fileID: 3200614552414708419}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,7 +231,3 @@ MonoBehaviour:
   holdSpot: {fileID: 5924048257866093987}
   Speed: 3
   WaitTime: 3
-  MovePositions:
-  - {fileID: 2756019233272565807, guid: 053061a01fc86414d830f84e8b651660, type: 3}
-  - {fileID: 4149432948046274577, guid: 74ac02264daa8cd448a6f9d2646c5d88, type: 3}
-  - {fileID: 3183951641887959327, guid: 69a89a1559d940f44990e66903977a91, type: 3}
