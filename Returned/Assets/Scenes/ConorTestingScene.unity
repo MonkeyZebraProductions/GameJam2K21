@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360322374290636972, guid: 0bf73d896b884c64b82e8289cbf1c9ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8482502
+      value: -3.46
       objectReference: {fileID: 0}
     - target: {fileID: 7360322374290636972, guid: 0bf73d896b884c64b82e8289cbf1c9ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -610,6 +610,14 @@ PrefabInstance:
     - target: {fileID: 3449277988161516918, guid: 09042a66fceed4b448d851e183f186ca, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449277988161516919, guid: 09042a66fceed4b448d851e183f186ca, type: 3}
+      propertyPath: speedDivisor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449277988161516919, guid: 09042a66fceed4b448d851e183f186ca, type: 3}
+      propertyPath: yeetStrength
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09042a66fceed4b448d851e183f186ca, type: 3}
@@ -997,7 +1005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &2145961048
 Rigidbody2D:
   serializedVersion: 4

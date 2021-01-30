@@ -157,7 +157,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -198,7 +198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   holdSpot: {fileID: 5924048257866093987}
-  Speed: 2
+  Speed: 3
+  WaitTime: 3
   MovePositions:
   - {fileID: 2756019233272565807, guid: 053061a01fc86414d830f84e8b651660, type: 3}
   - {fileID: 4149432948046274577, guid: 74ac02264daa8cd448a6f9d2646c5d88, type: 3}
