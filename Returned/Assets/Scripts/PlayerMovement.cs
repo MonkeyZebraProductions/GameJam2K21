@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 reletiveVector = camCoords - rb.position;
 
             //Prep to throw the object!
-            Vector2 finalVector = reletiveVector.normalized + rb.position; // Correct direction combined with the right start point (us!)
+            Vector2 finalVector = (reletiveVector.normalized * 1.5f) + rb.position; // Correct direction combined with the right start point (us!)
             heldObject.transform.SetParent(null);
             heldObject.transform.position = finalVector;
             //test.transform.position = reletiveVector.normalized + rb.position;
