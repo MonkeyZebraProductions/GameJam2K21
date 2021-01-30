@@ -5,11 +5,11 @@ using UnityEngine;
 public class StealieManager : MonoBehaviour
 {
     private GameObject[] _items;
-
+    public Transform[] MovePositions;
     public GameObject Stealie;
 
     public int _previousItems;
-
+    private float _randomMoveSpotPicker;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,8 @@ public class StealieManager : MonoBehaviour
         _items = GameObject.FindGameObjectsWithTag("Item");
         if (_items.Length<_previousItems)
         {
-            Instantiate(Stealie, new Vector3(0, 1, 0), Quaternion.identity);
+            _randomMoveSpotPicker = Random.Range(0f, MovePositions.Length);
+            Instantiate(Stealie, MovePositions[(int) _randomMoveSpotPicker].position, Quaternion.identity);
             _previousItems = _items.Length;
         }
     }

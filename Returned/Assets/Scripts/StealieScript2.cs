@@ -6,7 +6,7 @@ public class StealieScript2 : MonoBehaviour
 {
     public Transform Player, holdSpot;
     public float Speed,WaitTime;
-    public Transform[] MovePositions;
+    private Transform[] movePoints;
 
     private bool _isFollow,_isPlayerHolding,_isStealieHolding, _isStunned;
     private PlayerMovement playerMovement;
@@ -22,6 +22,12 @@ public class StealieScript2 : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         stealieManager = FindObjectOfType<StealieManager>();
         collider2D = GetComponent<Collider2D>();
+        int i = 0;
+        foreach(Transform element in stealieManager.MovePositions)
+        {
+            movePoints[i] = stealieManager.MovePositions[i];
+            i++;
+        }
     }
 
     // Update is called once per frame
@@ -43,10 +49,10 @@ public class StealieScript2 : MonoBehaviour
         if (_isStealieHolding)
         {
             _isFollow = false;
-            transform.position = Vector3.MoveTowards(transform.position, MovePositions[(int)_randomMoveSpotPicker].position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, movePoints[(int)_randomMoveSpotPicker].position, Speed * Time.deltaTime);
 
             //drops item when reached position
-            if(transform.position== MovePositions[(int)_randomMoveSpotPicker].position)
+            if(transform.position== movePoints[(int)_randomMoveSpotPicker].position)
             {
                 playerMovement.heldObject.transform.SetParent(null);
                 Rigidbody2D objRb = playerMovement.heldObject.GetComponent<Rigidbody2D>();
@@ -80,7 +86,7 @@ public class StealieScript2 : MonoBehaviour
             playerMovement.holdingSomething = false;
             _isStealieHolding = true;
             
-            _randomMoveSpotPicker = Random.Range(0f,MovePositions.Length);
+            _randomMoveSpotPicker = Random.Range(0f, movePoints.Length);
         }
 
         if (collision.gameObject.tag=="Item")
