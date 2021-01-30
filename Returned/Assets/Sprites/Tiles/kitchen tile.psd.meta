@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 0a890125ccd962e409575bdd33736a91
+<<<<<<< HEAD:Returned/Assets/Sprites/bounce arms up animation player.png.meta
+guid: d3c186786bfd972449a24084f56f8fc0
+=======
+guid: 521db3246bfa6334498cb6a2710e95a2
+>>>>>>> de2ea258e5dbe7c1840ccdeb97ca5acd1786d392:Returned/Assets/Sprites/Tiles/kitchen tile.psd.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -88,7 +92,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
