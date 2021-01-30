@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject heldObject;
     public bool throwable = true;
 
-    public int yeetStrength;
+    public float yeetStrength;
 
 
     // Start is called before the first frame update
@@ -99,7 +99,8 @@ public class PlayerMovement : MonoBehaviour
             heldObject.GetComponent<BoxCollider2D>().enabled = true;
             
             //Throw the object!
-            objRb.velocity = reletiveVector * yeetStrength;
+            objRb.velocity = reletiveVector.normalized * yeetStrength;
+            //rb.velocity = rb.velocity + (finalVector * 10);
             throwable = false;
         }
     }
@@ -113,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = Scaler;
     }
 
+    //For pickup
     void OnCollisionStay2D(Collision2D other)
     {
         if(other.gameObject.tag == "Item" && Input.GetButton("PickupThrow") && !holdingSomething)
@@ -125,6 +127,20 @@ public class PlayerMovement : MonoBehaviour
             heldObject.GetComponent<Rigidbody2D>().simulated = false;
             heldObject.GetComponent<BoxCollider2D>().enabled = false;
             throwable = false;
+        }
+    }
+
+    //for portal open
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Portal") && Input.GetButton("Portal"))
+        {
+            PortalOpener hitPortal = other.gameObject.GetComponent<PortalOpener>();
+            if(!hitPortal.opened)
+            {
+                hitPortal.opened = true;
+                hitPortal.StartOpen();
+            }
         }
     }
 }
