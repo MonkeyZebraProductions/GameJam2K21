@@ -251,7 +251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1125ece200b3807489568c120b5d877a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovePositions: []
+  MovePositions:
+  - {fileID: 1874689708}
+  - {fileID: 1485066298}
+  - {fileID: 1240835938}
   Stealie: {fileID: 7816261190253985684, guid: 1f0d2276664e28c41894891b4e452436, type: 3}
   _previousItems: 0
 --- !u!4 &1106119628
