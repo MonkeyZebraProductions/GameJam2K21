@@ -22,6 +22,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Dog")
                     {
                         manager.dogPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -34,6 +35,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Child")
                     {
                         manager.childPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -46,6 +48,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Man")
                     {
                         manager.manPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -58,6 +61,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Old")
                     {
                         manager.oldPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -70,6 +74,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Homework")
                     {
                         manager.homeworkPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -82,6 +87,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Miner")
                     {
                         manager.minerPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -94,6 +100,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Squirrel")
                     {
                         manager.squirrelPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -106,6 +113,7 @@ public class ProcessItem : MonoBehaviour
                     if(itemHit.destination == "Buisness")
                     {
                         manager.buisnessPortal = true;
+                        other.gameObject.SetActive(false);
                     }
                     else
                     {

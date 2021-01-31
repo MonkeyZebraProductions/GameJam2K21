@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SwapScene : MonoBehaviour
 {
+    public string sceneToLoad;
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene("RealGame");
+        
     }
 
     void OnEnable()
     {
-        
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

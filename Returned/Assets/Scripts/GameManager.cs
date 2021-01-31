@@ -12,4 +12,15 @@ public class GameManager : MonoBehaviour
     public bool minerPortal = false;
     public bool squirrelPortal = false;
     public bool buisnessPortal = false;
+
+
+    public GameObject endScene;
+
+    void Update()
+    {
+        if(dogPortal && childPortal && manPortal && oldPortal && homeworkPortal && minerPortal && squirrelPortal && buisnessPortal)
+        {
+            endScene.SetActive(true);
+        }
+    }
 }
