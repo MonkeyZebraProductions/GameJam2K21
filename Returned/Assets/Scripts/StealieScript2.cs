@@ -6,13 +6,14 @@ public class StealieScript2 : MonoBehaviour
 {
     public Transform Player, holdSpot;
     public float Speed,WaitTime;
-    private Transform[] movePoints;
+    public AudioSource FollowingSound, GrabItem, HitbyItem, LouderSFX;
 
+    private Transform[] movePoints;
     private bool _isFollow,_isPlayerHolding,_isStealieHolding, _isStunned;
     private PlayerMovement playerMovement;
     private StealieManager stealieManager;
     private float _randomMoveSpotPicker;
-    private Collider2D collider2D;
+    private Collider2D colliderr2D;
    
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class StealieScript2 : MonoBehaviour
         Player= GameObject.FindGameObjectWithTag("Player").transform;
         playerMovement = FindObjectOfType<PlayerMovement>();
         stealieManager = FindObjectOfType<StealieManager>();
-        collider2D = GetComponent<Collider2D>();
+        colliderr2D = GetComponent<Collider2D>();
         int i = 0;
         foreach(Transform element in stealieManager.MovePositions)
         {
@@ -39,6 +40,7 @@ public class StealieScript2 : MonoBehaviour
         if(_isPlayerHolding && !_isStunned || stealieManager._previousItems<=4 && !_isStunned)
         {
             _isFollow = true;
+            FollowingSound.Stop();
         }
         else
         {
@@ -68,6 +70,7 @@ public class StealieScript2 : MonoBehaviour
         if(_isFollow)
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
+            FollowingSound.Play();
         }
         
     }
@@ -78,19 +81,20 @@ public class StealieScript2 : MonoBehaviour
     {
         if(collision.gameObject.layer==8)
         {
-            Physics2D.IgnoreCollision(collision.collider, collider2D);
+            Physics2D.IgnoreCollision(collision.collider, colliderr2D);
         }
         if (collision.gameObject.tag == "Player")
         {
+            GrabItem.Play();
             playerMovement.heldObject.transform.SetParent(holdSpot);
             playerMovement.holdingSomething = false;
             _isStealieHolding = true;
-            
             _randomMoveSpotPicker = Random.Range(0f, movePoints.Length);
         }
 
         if (collision.gameObject.tag=="Item")
         {
+            HitbyItem.Play();
             StartCoroutine(Stunned());
         }
     }
