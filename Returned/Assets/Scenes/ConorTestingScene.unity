@@ -251,6 +251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1125ece200b3807489568c120b5d877a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovePositions:
+  - {fileID: 1874689708}
+  - {fileID: 1485066298}
+  - {fileID: 1240835938}
   Stealie: {fileID: 7816261190253985684, guid: 1f0d2276664e28c41894891b4e452436, type: 3}
   _previousItems: 0
 --- !u!4 &1106119628
@@ -1296,6 +1300,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7816261189336155473, guid: 1f0d2276664e28c41894891b4e452436, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816261189336155473, guid: 1f0d2276664e28c41894891b4e452436, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7816261190253985680, guid: 1f0d2276664e28c41894891b4e452436, type: 3}
       propertyPath: Player
       value: 
