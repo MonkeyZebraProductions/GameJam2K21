@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject heldObject;
     public bool throwable = true;
 
+    public GameObject queueThing; //the floating Q
+
     public float yeetStrength;
 
     public AudioSource RunSound, JumpSound, Throw, EncomberedMove,PickupItem;
@@ -177,14 +179,26 @@ public class PlayerMovement : MonoBehaviour
     //for portal open
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Portal") && Input.GetButton("Portal"))
+        if(other.gameObject.CompareTag("Portal"))
         {
-            PortalOpener hitPortal = other.gameObject.GetComponent<PortalOpener>();
-            if(!hitPortal.opened)
+            queueThing.SetActive(true);
+            if(Input.GetButton("Portal"))
             {
-                hitPortal.opened = true;
-                hitPortal.StartOpen();
+                PortalOpener hitPortal = other.gameObject.GetComponent<PortalOpener>();
+                if(!hitPortal.opened)
+                {
+                    hitPortal.opened = true;
+                    hitPortal.StartOpen();
+                }
             }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Portal"))
+        {
+            queueThing.SetActive(false);
         }
     }
 }
