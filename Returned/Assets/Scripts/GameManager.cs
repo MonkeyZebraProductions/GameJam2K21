@@ -16,11 +16,15 @@ public class GameManager : MonoBehaviour
 
     public GameObject endScene;
 
+    public GameObject player;
+
     void Update()
     {
         if(dogPortal && childPortal && manPortal && oldPortal && homeworkPortal && minerPortal && squirrelPortal && buisnessPortal)
         {
             endScene.SetActive(true);
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.transform.localScale = new Vector3(1, player.transform.localScale.y, player.transform.localScale.z);
         }
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Returned/Assets/Sprites/Inside Couch.png.meta
 guid: 40f2feeef1853de46ae2ad082b02c65f
+=======
+guid: 460ece1f0c9f4944fbc528aac1b2d058
+>>>>>>> afbdd17b0a2815c891a94bb8a43781aef9738f8d:Returned/Assets/sprites/Portal Particles.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
