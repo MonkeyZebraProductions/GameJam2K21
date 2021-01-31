@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true; //Whether or not you're facing right (for flipping sprite)
 
 
-    private bool isGrounded; //Check for if the player is on the ground
+    private bool isGrounded,isWalking,isFalling; //Check for if the player is on the ground
     public Transform groundCheck; // Where to check for that ^
     public float checkRadius; // Radius of that check ^
     public LayerMask whatIsGround; // What to look for in that check ^^
@@ -30,12 +30,16 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource RunSound, JumpSound, Throw, EncomberedMove,PickupItem;
     public AudioClip Footstep,Pickup;
-    private bool isWalking = true;
+    
+
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        
     }
 
     void FixedUpdate()
@@ -46,9 +50,25 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal"); //Take in horizontal input from player
         rb.velocity = new Vector2(moveInput * moddedSpeed, rb.velocity.y); //Move player
 
-        if(moveInput>0 && isGrounded == true || moveInput<0 && isGrounded==true)
+        if(rb.velocity.y<-0.1f)
+        {
+            isFalling = true;
+            //Debug.Log(isFalling);
+        }
+        else
+        {
+            isFalling = false;
+        }
+
+        Debug.Log(rb.velocity);
+
+        if(rb.velocity.x>0.1f && isGrounded == true || rb.velocity.x < -0.1f && isGrounded==true)
         {
             isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
         }
 
         if(isWalking)
@@ -69,6 +89,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("IsGrounded", isGrounded);
+        animator.SetBool("IsRunning", isWalking);
+        animator.SetBool("IsFalling", isFalling);
+        animator.SetBool("IsHolding", holdingSomething);
+
+
         //Half the speed when you're holding something.
         if(holdingSomething)
         {
@@ -93,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
         if(!Input.GetButton("PickupThrow") && !throwable && holdingSomething)
         {
             throwable = true;
-            PickupItem.PlayOneShot(Pickup);
+            //PickupItem.PlayOneShot(Pickup);
         }
 
         //Throw!!!
@@ -119,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
             //rb.velocity = rb.velocity + (finalVector * 10);
             throwable = false;
 
-            Throw.Play();
+            //Throw.Play();
         }
     }
 
