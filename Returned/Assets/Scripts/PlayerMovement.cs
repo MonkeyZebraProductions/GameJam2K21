@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float yeetStrength;
 
+    public AudioSource RunSound, JumpSound, Throw, EncomberedMove,PickupItem;
+    public AudioClip Footstep;
+    private bool isWalking = true;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,16 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal"); //Take in horizontal input from player
         rb.velocity = new Vector2(moveInput * moddedSpeed, rb.velocity.y); //Move player
+
+        if(moveInput>0 && isGrounded == true || moveInput<0 && isGrounded==true)
+        {
+            isWalking = true;
+        }
+
+        if(isWalking)
+        {
+            RunSound.Play();
+        }
 
         //Flip the spite so you run the other way
         if(facingRight == false && moveInput > 0)
@@ -60,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         if(holdingSomething)
         {
             moddedSpeed = speed / speedDivisor;
+            EncomberedMove.Play();
         }
         else
         {
@@ -72,12 +86,14 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpMagnitute;
             isGrounded = false;
+            JumpSound.Play();   
         }
 
         //Monitor if the object held can be thrown yet or not
         if(!Input.GetButton("PickupThrow") && !throwable && holdingSomething)
         {
             throwable = true;
+            PickupItem.Play();
         }
 
         //Throw!!!
@@ -102,6 +118,8 @@ public class PlayerMovement : MonoBehaviour
             objRb.velocity = reletiveVector.normalized * yeetStrength;
             //rb.velocity = rb.velocity + (finalVector * 10);
             throwable = false;
+
+            Throw.Play();
         }
     }
 
