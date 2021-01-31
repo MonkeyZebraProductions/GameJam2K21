@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Old)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 12bca5537e66e0743ace86c096c4b22c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!1001 &123051017
@@ -869,7 +873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3535511, y: -7.9442606, z: -10}
+  m_LocalPosition: {x: 3.3535502, y: -7.9443073, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4927,6 +4931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Buisness)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f85e90513f069d44b40334bd94d405c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!1001 &880869818
@@ -5309,6 +5317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Man)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 206eb4df83caaa9478301b67971de874, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!1001 &1148283906
@@ -5512,6 +5524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Dog)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 062926ba46d7b3d47b732d1a87b88932, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!4 &1299246985 stripped
@@ -5595,6 +5611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Homework)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b9ac426919218e149baa31c556eff041, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!1001 &1400274360
@@ -6234,6 +6254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Miner)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c3c063266067cef4a942410d8e9176b6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!1 &1813402098
@@ -6367,6 +6391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Squirrel)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 373ffe768fe26b1429c0e7601e5c9001, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
 --- !u!4 &2012847351 stripped
@@ -6445,5 +6473,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (Child)
       objectReference: {fileID: 0}
+    - target: {fileID: 1002485409540382167, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ef22c13afd805224d978cf7bc67af3bf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45cf61d5bed9664bb58235a9ca43d5c, type: 3}
