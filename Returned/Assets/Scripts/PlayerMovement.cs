@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public float yeetStrength;
 
     public AudioSource RunSound, JumpSound, Throw, EncomberedMove,PickupItem;
-    public AudioClip Footstep;
+    public AudioClip Footstep,Pickup;
     private bool isWalking = true;
 
     // Start is called before the first frame update
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(isWalking)
         {
-            RunSound.Play();
+            //RunSound.Play();
         }
 
         //Flip the spite so you run the other way
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         if(!Input.GetButton("PickupThrow") && !throwable && holdingSomething)
         {
             throwable = true;
-            PickupItem.Play();
+            PickupItem.PlayOneShot(Pickup);
         }
 
         //Throw!!!
