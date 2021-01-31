@@ -853,6 +853,7 @@ MonoBehaviour:
   EncomberedMove: {fileID: 2830863375022723751}
   PickupItem: {fileID: 7732261767271667671}
   Footstep: {fileID: 8300000, guid: d163993924270cf44a0bf057621bbc34, type: 3}
+  Pickup: {fileID: 8300000, guid: 1fd8d3ae5fccb8c45a75f39f585f1616, type: 3}
 --- !u!70 &1819016310233830634
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
